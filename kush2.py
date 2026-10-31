@@ -3,3 +3,6 @@ age=int(input("age: "))
 age2=abs(age-50)
 print("user_name: " + name + "\n" + "age: " + str(age)+ "\n" + "age2: " + str(age2))
 print(f"user_name: {name}\nage: {age}\nage2: {age2}")
+
+Kush="kushal"
+passs=191200
