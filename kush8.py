@@ -34,6 +34,6 @@ card_trail=input("enter the pin: ")
 if card_trail==pin:
     print("enter the amount: ")
 else:
-    print("passward is incorrect")
+    print("u lost all trails")
 
 
