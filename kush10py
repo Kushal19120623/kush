@@ -1,0 +1,24 @@
+#for loop
+hema=("kushal")
+for i in hema:
+    print(i,end="")
+    
+for num in range(1,5):
+    print(i)
+k="kushal"
+for i,j in enumerate(k):
+    print(f"{j} is in {i} th index")
+
+for i in range(1,6):
+    for j in range(1,11):
+        print(f"{i}x{j}={i*j}")
+    print()
+
+k={
+    "name":"kushal",
+    "age":12,
+    "income":1000
+
+}
+for i,j in k.items():
+    print(f"{i} : {j}")

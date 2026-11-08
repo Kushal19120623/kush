@@ -52,6 +52,7 @@ while h<3:
             k=int(input("enter the amount to withdraw: "))
             if k<l:
                 print(f"withdrawal successful, your remaining balance is {l-k}")
+        break        
     else:
         print("access denied")
         
