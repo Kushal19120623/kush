@@ -27,3 +27,13 @@ elif gender=="m" and age>=18:
     print("You are a man and you have to pay full ticket")
 else:
     print("invalid input")
+
+#insert the card
+pin=1234
+card_trail=input("enter the pin: ")
+if card_trail==pin:
+    print("enter the amount: ")
+else:
+    print("u lost all trails")
+
+
