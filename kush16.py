@@ -27,3 +27,4 @@ if __name__ == '__main__':
     uni=sorted(set(arr))
     
     print(uni[-2])
+    print()
