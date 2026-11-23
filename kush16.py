@@ -27,3 +27,62 @@ if __name__ == '__main__':
     uni=sorted(set(arr))
     
     print(uni[-2])
+    print()
+
+#Let's learn about list comprehensions! You are given three integers  and  representing the dimensions of a cuboid along with an integer . Print a list of all possible coordinates given by  on a 3D grid where the sum of  is not equal to . Here, . Please use list comprehensions rather than multiple loops, as a learning exercise.
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+    l=[[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i+j+k!=n ]
+    print(l)
+
+#The provided code stub will read in a dictionary containing key/value pairs of name:[marks] for a list of students. Print the average of the marks array for the student name provided, showing 2 places after the decimal.
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+avr=sum(student_marks[query_name])/3
+print("{:.2f}".format(avr))
+
+#Given the names and grades for each student in a class of  students, store them in a nested list and print the name(s) of any student(s) having the second lowest grade.
+
+#Note: If there are multiple students with the second lowest grade, order their names alphabetically and print each name on a new line.
+if __name__ == '__main__':
+    r=[]
+    s=set()
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        r.append([name,score])
+        s.add(score)
+    
+    s1=sorted(s)[1]
+    s2=[]
+    for name,score in r:
+        if score==s1:
+            s2.append(name)
+    for name in sorted(s2):
+        print(name)
+
+
+#Given a list of rational numbers,find their product.
+from fractions import Fraction
+from functools import reduce
+
+def product(fracs):
+    t =reduce(lambda x,y:x*y,fracs)
+    return t.numerator, t.denominator
+
+if __name__ == '__main__':
+    fracs = []
+    for _ in range(int(input())):
+        fracs.append(Fraction(*map(int, input().split())))
+    result = product(fracs)
+    print(*result)
